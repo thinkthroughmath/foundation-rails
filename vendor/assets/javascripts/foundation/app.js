@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
 		$(contentLocation).css('display', 'block');
 	}
 
-  $('dl.tabs dd a').live('click', function (event) {
+  $('dl.tabs dd a').on('click', function (event) {
     activateTab($(this));
   });
 
@@ -60,7 +60,7 @@ jQuery(document).ready(function ($) {
 	/* DROPDOWN NAV ------------- */
 
 	var lockNavBar = false;
-	$('.nav-bar a.flyout-toggle').live('click', function(e) {
+	$('.nav-bar a.flyout-toggle').on('click', function(e) {
 		e.preventDefault();
 		var flyout = $(this).siblings('.flyout');
 		if (lockNavBar === false) {
